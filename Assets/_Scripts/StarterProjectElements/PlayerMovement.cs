@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,24 +24,40 @@ public class PlayerMovement : MonoBehaviour
     	{
     		rb2d = GetComponent<Rigidbody2D>();
     	}
-    
-    	private void Update()
-    	{
-    		Vector2 input = GetInput();
-    
-    		SetAnimation(input);
-    		SetAccelerationParameters(input);
-    
-    		float speed = CalculateSpeed(input, accelerationCurve);
-    
-    		SetVelocity(speed, input);
-    	}
-    
-    	private void SetAnimation(Vector2 input)
-    	{
-    		animator.SetFloat(animationMovementX, input.x);
-            animator.SetFloat(animationMovementY, input.y);
+
+        
+        private void Update()
+        {
+            Vector2 input = GetInput();
+
+            SetAnimation(input);
+            SetAccelerationParameters(input);
+
+            float speed = CalculateSpeed(input, accelerationCurve);
+
+            SetVelocity(speed, input);
         }
+
+
+
+        //private void OnMove(InputValue value)
+        //{
+        //    Vector2 input = value.Get<Vector2>();
+
+        //    SetAnimation(input);
+        //    SetAccelerationParameters(input);
+
+        //    float speed = CalculateSpeed(input, accelerationCurve);
+
+        //    SetVelocity(speed, input);
+        //}
+
+
+        private void SetAnimation(Vector2 input)
+    	    {
+    		    animator.SetFloat(animationMovementX, input.x);
+                animator.SetFloat(animationMovementY, input.y);
+            }
     
     	private void SetVelocity(float speed, Vector2 input)
     	{
