@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 10;
-    [SerializeField] private FloatValueSO currentHealth;
+    [SerializeField] public float maxHealth = 10;
+    [SerializeField] public FloatValueSO currentHealth;
 
     [SerializeField] private GameObject bloodParticle;
 

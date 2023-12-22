@@ -16,11 +16,21 @@ public class EdibleItemSO : ItemSO, IDestroyableItem, IItemAction
 
     public bool PerformAction(GameObject character)
     {
+        Health health = character.GetComponent<Health>();
+
+        if (health != null && health.currentHealth.Value * 10 >= health.maxHealth)
+        {
+            Debug.Log("Full HP, cannot use health booster.");
+            return false;
+
+        }
         foreach (ModifierData item in modifierData)
         {
             item.characterStatModifier.AffectCharacter(character, item.value);
         }
         return true;
+
+
     }
 }
 

@@ -9,7 +9,7 @@ public class CharacterStatHealthModifierSO : CharacterStatModifierSO
     {
         Health health = character.GetComponent<Health>();
 
-        if (health != null)
+        if (health != null && health.currentHealth.Value < health.maxHealth)
         {
             health.AddHealth((int)val);
         }

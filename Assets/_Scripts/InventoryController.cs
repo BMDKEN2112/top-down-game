@@ -58,13 +58,16 @@ public class InventoryController : MonoBehaviour
         IItemAction itemAction = inventoryItem.item as IItemAction;
         if (itemAction != null)
         {
-            itemAction.PerformAction(gameObject);
+            bool actionPerformed = itemAction.PerformAction(gameObject);
+            
+            IDestroyableItem destroyable = inventoryItem.item as IDestroyableItem;
+            if (destroyable != null && actionPerformed)
+            {
+                inventoryData.RemoveItem(itemIndex, 1);
+            }
+            
         }
-        IDestroyableItem destroyable = inventoryItem.item as IDestroyableItem;
-        if (destroyable != null)
-        {
-            inventoryData.RemoveItem(itemIndex,1);
-        }
+        
     }
 
     private void HandleDragging(int itemIndex)
