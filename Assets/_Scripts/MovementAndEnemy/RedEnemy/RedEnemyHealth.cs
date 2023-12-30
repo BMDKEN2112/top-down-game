@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyHealth : MonoBehaviour
+public class RedEnemyHealth : MonoBehaviour
 {
     [SerializeField]
     private int currentHealth, maxHealth;
@@ -12,18 +12,8 @@ public class EnemyHealth : MonoBehaviour
 
     public UnityEvent<GameObject> OnHitWithReference, OnDeathWithReference;
 
-    Animator animator;
-
-    bool isAlive = true;
-
     [SerializeField]
     private bool isDead = false;
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isAlive", isAlive);
-    }
 
     public void InitializeHealth(int healthValue)
     {
@@ -40,9 +30,8 @@ public class EnemyHealth : MonoBehaviour
             return;
 
         currentHealth -= damage;
-        if ( currentHealth <= damage * 2)
+        if (currentHealth <= damage * 4)
         {
-            animator.SetTrigger("hit");     
             RectTransform textTransform = Instantiate(healthText).GetComponent<RectTransform>();
             textTransform.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
@@ -58,12 +47,8 @@ public class EnemyHealth : MonoBehaviour
         {
             OnDeathWithReference?.Invoke(sender);
             isDead = true;
-            animator.SetBool("isAlive", false);
+            Destroy(gameObject);
         }
     }
 
-    public void OnDestroy()
-    {
-        Destroy(gameObject);
-    }
 }

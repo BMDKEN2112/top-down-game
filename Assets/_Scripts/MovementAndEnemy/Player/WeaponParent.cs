@@ -79,6 +79,11 @@ public class WeaponParent : MonoBehaviour
             {
                 enemyHealth.GetHit(damage, transform.parent.gameObject);
             }
+            RedEnemyHealth redEnemyHealth;
+            if (redEnemyHealth = collider.GetComponent<RedEnemyHealth>())
+            {
+                redEnemyHealth.GetHit(damage, transform.parent.gameObject);
+            }
         }
     }
 }
