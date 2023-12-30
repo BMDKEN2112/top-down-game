@@ -26,6 +26,11 @@ public class InventorySO : ScriptableObject
 
     public int AddItem(ItemSO item, int quantity)
     {
+        if (item == null)
+        {
+            Debug.LogError("Trying to add null item to inventory.");
+            return quantity;
+        }
         if (item.isStackable == false)
         {
             for (int i = 0; i < inventoryItems.Count; i++)

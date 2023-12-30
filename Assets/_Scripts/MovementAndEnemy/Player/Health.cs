@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Health : MonoBehaviour
@@ -14,7 +15,8 @@ public class Health : MonoBehaviour
     [SerializeField] private float flashTime = 0.2f;
 
     Animator animator;
-
+    [SerializeField]
+    private bool isDead = false;
     bool isAlive = true;
 
     private void Start()
@@ -27,8 +29,10 @@ public class Health : MonoBehaviour
         }
         else
         {
+            Debug.Log("Animator component found on: " + gameObject.name);
             animator.SetBool("isAlive", isAlive);
         }
+        isDead = false;
     }
 
     public void Reduce(int damage)
@@ -37,7 +41,9 @@ public class Health : MonoBehaviour
         CreateHitFeedback();
         if (currentHealth.Value <= 0)
         {
-            Die();
+            isDead = true;
+            Destroy(gameObject);
+            SceneManager.LoadSceneAsync(0);
         }
     }
 
