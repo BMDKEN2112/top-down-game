@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10286f52f87302c419a6a8464e119647
+guid: 923c7ee69560e4b4d9cbf5d2a44d52e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +102,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: machete_ [diamond]_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.52998096, y: 0.22080217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f4f2324c1a89b4fa25d86e43aa49e0
+      internalID: 1519184550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete_ [diamond]_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3da84f8d400834899afec49336b563
+      internalID: -1413571779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete_ [diamond]_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 4
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.60493344, y: 0.17395687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60768c0d878de1439d3526e1cf02bc1
+      internalID: -1806219328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete_ [diamond]_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 4
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3936e6be3adb5cf45925084ac6e1d4a6
+      internalID: 1669491057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete_ [diamond]_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 4
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.73047864, y: 0.18145211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d70174d9aa55843a83c6053ab4b498
+      internalID: 563391569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      machete_ [diamond]_0: 1519184550
+      machete_ [diamond]_4: 563391569
+      machete_ [diamond]_3: 1669491057
+      machete_ [diamond]_2: -1806219328
+      machete_ [diamond]_1: -1413571779
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
