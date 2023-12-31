@@ -21,9 +21,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string animationMovementX = "InputX";
     [SerializeField] private string animationMovementY = "InputY";
 
-    //[SerializeField]
-    //private InputActionReference movement, attack, pointerPosition;
-
     private Vector2 pointerInput, movementInput;
 
     public Vector2 PointerInput { get => pointerInput; set => pointerInput = value; }
@@ -32,17 +29,6 @@ public class PlayerMovement : MonoBehaviour
     private WeaponParent weaponParent;
 
     private PlayerMovers playerMovers;
-
-
-    //private void OnEnable()
-    //{
-    //    attack.action.performed += PerformAttack;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    attack.action.performed -= PerformAttack;
-    //}
 
     public void PerformAttack()
     {
@@ -59,9 +45,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Vector2 input = GetInput();
-
-        //pointerInput = GetPointerInput();
-        //movementInput = movement.action.ReadValue<Vector2>().normalized;
 
         weaponParent.PointerPosition = pointerInput;
         playerMovers.MovementInput = movementInput;
@@ -116,12 +99,4 @@ public class PlayerMovement : MonoBehaviour
     {
         return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
-
-    //private Vector2 GetPointerInput()
-    //{
-    //    Vector3 mousePos = pointerPosition.action.ReadValue<Vector2>();
-    //    mousePos.z = Camera.main.nearClipPlane;
-    //    return Camera.main.ScreenToWorldPoint(mousePos);
-
-    //}
 }

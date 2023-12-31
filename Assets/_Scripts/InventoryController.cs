@@ -65,9 +65,7 @@ public class InventoryController : MonoBehaviour
             {
                 inventoryData.RemoveItem(itemIndex, 1);
             }
-            
         }
-        
     }
 
     private void HandleDragging(int itemIndex)

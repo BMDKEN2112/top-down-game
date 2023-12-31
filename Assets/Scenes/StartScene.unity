@@ -8063,6 +8063,10 @@ PrefabInstance:
       value: Item
       objectReference: {fileID: 0}
     - target: {fileID: 6503937973626869375, guid: 83dbdca134e70704db241978170d2bb0, type: 3}
+      propertyPath: <quantity>k__BackingField
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503937973626869375, guid: 83dbdca134e70704db241978170d2bb0, type: 3}
       propertyPath: <inventoryItem>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 9f6dc9624e868324e902e3a67f8013ac, type: 2}

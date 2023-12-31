@@ -36,7 +36,6 @@ public class EdibleItemSO : ItemSO, IDestroyableItem, IItemAction
 
 public interface IDestroyableItem
 {
-
 }
 
 public interface IItemAction

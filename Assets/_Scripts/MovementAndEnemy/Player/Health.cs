@@ -22,16 +22,16 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth.Value = 1;
-        animator = GetComponent<Animator>();
-        if (animator == null)
-        {
-            Debug.LogError("Animator component not found on the object: " + gameObject.name);
-        }
-        else
-        {
-            Debug.Log("Animator component found on: " + gameObject.name);
-            animator.SetBool("isAlive", isAlive);
-        }
+        //animator = GetComponent<Animator>();
+        //if (animator == null)
+        //{
+        //    Debug.LogError("Animator component not found on the object: " + gameObject.name);
+        //}
+        //else
+        //{
+        //    Debug.Log("Animator component found on: " + gameObject.name);
+        //    animator.SetBool("isAlive", isAlive);
+        //}
         isDead = false;
     }
 
